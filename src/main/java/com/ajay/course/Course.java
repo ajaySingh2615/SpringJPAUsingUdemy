@@ -1,7 +1,13 @@
 package com.ajay.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
 
+    @Id
     private Long id;
     private String name;
     private String author;
@@ -25,6 +31,18 @@ public class Course {
 
     public String getAuthor() {
         return author;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     @Override
